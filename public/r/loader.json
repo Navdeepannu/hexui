@@ -1,0 +1,14 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "loader",
+  "type": "registry:component",
+  "title": "Loader Component",
+  "description": "A simple animating loading component.",
+  "files": [
+    {
+      "path": "src/registry/loader/loader.tsx",
+      "content": "\"use client\";\n\nimport { motion } from \"framer-motion\";\nimport React from \"react\";\n\n// Define supported sizes\ntype Size = \"sm\" | \"md\" | \"lg\";\n\n// Component props\ninterface LoadingProps {\n  size?: Size;\n  className?: string;\n}\n\n// Tailwind size classes based on size prop\nconst sizeClasses: Record<Size, string> = {\n  sm: \"w-4 h-4\",\n  md: \"w-6 h-6\",\n  lg: \"w-8 h-8\",\n};\n\n// Utility to join class names\nconst cn = (...classes: (string | false | null | undefined)[]) =>\n  classes.filter(Boolean).join(\" \");\n\nconst Loader = ({ size = \"md\", className }: LoadingProps) => {\n  const sizeClass = sizeClasses[size];\n\n  // Render animated loading dots\n  const renderDots = () => (\n    <div className=\"flex items-center justify-center\">\n      {[0, 0.3, 0.6].map((delay, i) => (\n        <motion.div\n          key={i}\n          className={cn(\n            \"rounded-full bg-neutral-800 dark:bg-neutral-300\", // fallback colors\n            sizeClass,\n          )}\n          animate={{\n            scale: [1, 1.2, 1],\n            opacity: [0.7, 1, 0.7],\n          }}\n          transition={{\n            duration: 1.5,\n            delay,\n            repeat: Infinity,\n            repeatType: \"mirror\",\n            ease: \"easeInOut\",\n          }}\n        />\n      ))}\n    </div>\n  );\n\n  return (\n    <div\n      className={cn(\"flex items-center gap-2\", className)}\n      role=\"status\"\n      aria-label=\"Loader\"\n    >\n      {renderDots()}\n    </div>\n  );\n};\n\nexport { Loader };\n",
+      "type": "registry:component"
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { ComponentLayout } from "@/components/docsLayout/ComponentLayout";
-import { Loader } from "@/components/ui/showcase/loader";
+import { Loader } from "@/registry/loader/loader";
 
 const loadingComponentCode = `"use client";
 

@@ -7,7 +7,7 @@ import { useRef, useEffect } from "react";
 import {
   componentLinks,
   gettingStartedLinks,
-} from "@/lib/data/sidebar-navigation";
+} from "@/constants/data/sidebar-navigation";
 
 export default function Sidebar({
   sidebarOpen,

@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { searchData, SearchItem } from "@/lib/data/search-data";
+import { searchData, SearchItem } from "@/constants/data/search-data";
 import { useRouter } from "next/navigation";
 import {
   IconArrowForward,

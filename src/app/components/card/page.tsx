@@ -2,6 +2,7 @@
 import React from "react";
 import { ComponentLayout } from "@/components/docsLayout/ComponentLayout";
 import { BlogCard } from "@/components/ui/showcase/card";
+import { ServiceCard } from "@/components/ui/showcase/service-card";
 
 const cardComponentCode = `"use client";
 
@@ -197,19 +198,40 @@ Every removed icon, line, or word can bring clarity."
 export default function Page() {
   return (
     <ComponentLayout
-      title="Blog Card"
-      description="Minimalist Blog Card components. "
+      title="Service Card"
+      description="Minimalist Service Card components."
       preview={
-        <BlogCard
-          title="Minimalism"
-          excerpt="Minimalism isn't about what is there — it's about what's not.”
-Every removed icon, line, or word can bring clarity."
-          author="Navdeep Singh"
-          date="Jul 25"
-          readTime="2 min read"
-          image="https://images.unsplash.com/photo-1546471180-335a013cb87b?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          articleLink="https://medium.com/@navdeepsingh0/minimalism-in-ui-ux-design-less-but-better-76d43c1d76ef"
-        />
+        <div className="flex flex-col items-center justify-center">
+          <h1 className="mb-11 text-2xl font-bold tracking-tight md:text-4xl">
+            How can I help?
+          </h1>
+          <div className="grid grid-cols-1 gap-2.5 md:grid-cols-2">
+            <ServiceCard
+              title="Web Development"
+              image1="https://images.unsplash.com/photo-1636247499734-893da2bcfc1c?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZGVzaWduJTIwYnJhbmRpbmd8ZW58MHx8MHx8fDA%3D"
+              image2="https://images.unsplash.com/photo-1567262439850-1d4dc1fefdd0?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              className="rounded-3xl"
+            />
+            <ServiceCard
+              title="Creative Design"
+              image1="https://images.unsplash.com/photo-1636247499734-893da2bcfc1c?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZGVzaWduJTIwYnJhbmRpbmd8ZW58MHx8MHx8fDA%3D"
+              image2="https://images.unsplash.com/photo-1567262439850-1d4dc1fefdd0?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              className="rounded-xl"
+            />
+            <ServiceCard
+              title="Branding"
+              image1="https://images.unsplash.com/photo-1636247499734-893da2bcfc1c?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZGVzaWduJTIwYnJhbmRpbmd8ZW58MHx8MHx8fDA%3D"
+              image2="https://images.unsplash.com/photo-1567262439850-1d4dc1fefdd0?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              className="rounded-2xl"
+            />
+            <ServiceCard
+              title="Product Design"
+              image1="https://images.unsplash.com/photo-1636247499734-893da2bcfc1c?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZGVzaWduJTIwYnJhbmRpbmd8ZW58MHx8MHx8fDA%3D"
+              image2="https://images.unsplash.com/photo-1567262439850-1d4dc1fefdd0?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              className="rounded-lg"
+            />
+          </div>
+        </div>
       }
       code={cardDemo}
       installation={{

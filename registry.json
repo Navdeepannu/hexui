@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "acme",
+  "homepage": "https://acme.com",
+  "items": [
+    {
+      "name": "loader",
+      "type": "registry:component",
+      "title": "Loader Component",
+      "description": "A simple animating loading component.",
+      "files": [
+        {
+          "path": "src/registry/loader/loader.tsx",
+          "type": "registry:component"
+        }
+      ]
+    }
+  ]
+}

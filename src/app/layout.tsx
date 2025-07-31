@@ -10,7 +10,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Nest UI",
+  title: "HexUI",
   description:
     "Build beautiful UI for your websites faster with reusuable NestUI components.",
 };
@@ -23,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${inter.className} dark:bg-background bg-background mx-auto antialiased`}
+        className={`${inter.className} dark:bg-background bg-background mx-auto overflow-x-hidden antialiased`}
       >
         <ThemeProvider
           defaultTheme="dark"
