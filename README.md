@@ -1,6 +1,17 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# HexUI - Beautiful Copy & Paste Components
 
-## Getting Started
+HexUI is a modern component library built with React, TypeScript, and Tailwind CSS. Create stunning user interfaces with our collection of carefully crafted, copy-and-paste components and templates.
+
+## ✨ Features
+
+- 🎨 **Beautiful Design**: Carefully crafted components with modern aesthetics
+- 📋 **Copy & Paste**: Simply copy components and paste them into your project
+- 🔧 **Fully Customizable**: Built with Tailwind CSS for easy customization
+- ⚡ **Modern Stack**: React, TypeScript, and Tailwind CSS
+- 📱 **Responsive**: All components work perfectly on all screen sizes
+- ♿ **Accessible**: Built with accessibility best practices in mind
+
+## 🚀 Getting Started
 
 First, run the development server:
 
@@ -14,20 +25,64 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the component library.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📦 Using Components
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Browse the component library, find the component you want to use, and simply copy the code. Each component comes with:
 
-## Learn More
+- ✅ Complete source code
+- ✅ TypeScript definitions
+- ✅ Usage examples
+- ✅ Customization guide
 
-To learn more about Next.js, take a look at the following resources:
+## 🎯 Project Structure
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+src/
+├── app/           # Next.js app directory
+├── components/    # Reusable components
+│   └── ui/       # Core UI components
+├── data/         # Component data and examples
+└── library/      # Component library utilities
+lib/
+└── utils.ts      # Utility functions
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🛠️ Tech Stack
+
+- **Framework**: Next.js 15
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Components**: React 19
+- **Package Manager**: Bun
+
+## 📚 Learn More
+
+To learn more about the technologies used in HexUI:
+
+- [Next.js Documentation](https://nextjs.org/docs) - Learn about Next.js features and API
+- [Tailwind CSS](https://tailwindcss.com/docs) - Utility-first CSS framework
+- [TypeScript](https://www.typescriptlang.org/docs/) - JavaScript with type safety
+- [React](https://react.dev/) - The library for web and native user interfaces
+
+## 🤝 Contributing
+
+We welcome contributions! Whether it's:
+
+- 🐛 Bug reports
+- 💡 Feature requests
+- 📝 Documentation improvements
+- 🎨 New components
+- 🔧 Code improvements
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+---
+
+**Built with ❤️ by the HexUI team**
 
 ## Deploy on Vercel
 
