@@ -2,6 +2,7 @@
 import React from "react";
 import { Button } from "./ui/button";
 import { motion } from "motion/react";
+import Image from "next/image";
 
 const Landing = () => {
   const logos = [
@@ -216,7 +217,13 @@ const Landing = () => {
               {logo.component ? (
                 logo.component
               ) : (
-                <img src={logo.src} alt={logo.alt} className={logo.className} />
+                <Image
+                  src={logo.src}
+                  alt={logo.alt}
+                  width={100}
+                  height={100}
+                  className={logo.className}
+                />
               )}
             </div>
           </motion.div>

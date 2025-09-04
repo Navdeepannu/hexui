@@ -139,7 +139,7 @@ const Navbar = ({
                 <SheetHeader>
                   <SheetTitle>
                     <a href={logo.url} className="flex items-center gap-2">
-                      <img src={logo.src} className="max-h-8" alt={logo.alt} />
+                      <HexLogo />
                       <span className="text-foreground">{logo.title}</span>
                     </a>
                   </SheetTitle>

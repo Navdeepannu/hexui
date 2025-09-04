@@ -1,4 +1,3 @@
-import type { ReactNode } from "react";
 import CodePreview from "@/components/ui/kibo-ui/code-preview";
 import AiGlareLoader from "@/components/ui/loaders/ai-glare-loader";
 
