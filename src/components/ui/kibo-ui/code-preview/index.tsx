@@ -180,7 +180,7 @@ export function CodePreview({
               <div className="flex items-center gap-1">
                 <button
                   type="button"
-                  className="inline-flex items-center gap-1 rounded border border-border px-2 py-1 text-xs text-foreground bg-background/70 hover:bg-background shadow-sm dark:bg-white/10 dark:hover:bg-white/15 dark:border-white/20"
+                  className="border-border text-foreground bg-background/70 hover:bg-background inline-flex items-center gap-1 rounded border px-2 py-1 text-xs shadow-sm dark:border-white/20 dark:bg-white/10 dark:hover:bg-white/15"
                   onClick={() => setPreviewWidth(375)}
                   aria-label="Set preview to mobile size"
                 >
@@ -189,7 +189,7 @@ export function CodePreview({
                 </button>
                 <button
                   type="button"
-                  className="inline-flex items-center gap-1 rounded border border-border px-2 py-1 text-xs text-foreground bg-background/70 hover:bg-background shadow-sm dark:bg-white/10 dark:hover:bg-white/15 dark:border-white/20"
+                  className="border-border text-foreground bg-background/70 hover:bg-background inline-flex items-center gap-1 rounded border px-2 py-1 text-xs shadow-sm dark:border-white/20 dark:bg-white/10 dark:hover:bg-white/15"
                   onClick={() => setPreviewWidth(768)}
                   aria-label="Set preview to tablet size"
                 >
@@ -198,7 +198,7 @@ export function CodePreview({
                 </button>
                 <button
                   type="button"
-                  className="inline-flex items-center gap-1 rounded border border-border px-2 py-1 text-xs text-foreground bg-background/70 hover:bg-background shadow-sm dark:bg-white/10 dark:hover:bg-white/15 dark:border-white/20"
+                  className="border-border text-foreground bg-background/70 hover:bg-background inline-flex items-center gap-1 rounded border px-2 py-1 text-xs shadow-sm dark:border-white/20 dark:bg-white/10 dark:hover:bg-white/15"
                   onClick={() => setPreviewWidth("auto")}
                   aria-label="Set preview to full width"
                 >
@@ -216,7 +216,6 @@ export function CodePreview({
                 className="bg-card relative rounded-md border"
                 style={{ height: viewportHeight }}
               >
-
                 {/* Viewport centers content */}
                 <div className="flex h-full w-full items-center justify-center overflow-auto p-4">
                   <div
