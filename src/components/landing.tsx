@@ -50,13 +50,13 @@ const Landing = () => {
   ];
 
   return (
-    <div>
+    <div className="flex min-h-[80vh] w-full flex-col items-center justify-center">
       {/* Sportlight */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 2, ease: [0.16, 1, 0.3, 1], delay: 0.7 }}
-        className="absolute top-0 left-0 w-screen h-screen z-40 pointer-events-none overflow-hidden"
+        className="pointer-events-none absolute top-0 left-0 z-40 h-screen w-screen overflow-hidden"
       >
         {/* Main spotlight beam */}
         <div
@@ -116,12 +116,7 @@ const Landing = () => {
             delay: 0.3,
             ease: [0.16, 1, 0.3, 1],
           }}
-          className="mx-auto items-center bg-gradient-to-b from-neutral-700 via-neutral-800 to-neutral-800 dark:from-neutral-100 dark:via-neutral-200/90
-        dark:to-neutral-300/90 bg-clip-text text-center text-4xl font-semibold 
-        tracking-tight text-transparent
-        [text-shadow:0px_2px_4px_rgba(0,0,0,0.15)] dark:[text-shadow:0px_2px_4px_rgba(255,255,255,0.15)]
-        lg:[text-shadow:0px_3px_6px_rgba(0,0,0,0.2)] lg:dark:[text-shadow:0px_3px_6px_rgba(255,255,255,0.2)]
-        md:text-4xl lg:max-w-4xl lg:text-7xl"
+          className="mx-auto items-center bg-gradient-to-b from-neutral-700 via-neutral-800 to-neutral-800 bg-clip-text text-center text-4xl font-semibold tracking-tight text-transparent [text-shadow:0px_2px_4px_rgba(0,0,0,0.15)] md:text-4xl lg:max-w-4xl lg:text-7xl lg:[text-shadow:0px_3px_6px_rgba(0,0,0,0.2)] dark:from-neutral-100 dark:via-neutral-200/90 dark:to-neutral-300/90 dark:[text-shadow:0px_2px_4px_rgba(255,255,255,0.15)] lg:dark:[text-shadow:0px_3px_6px_rgba(255,255,255,0.2)]"
         >
           Beautiful components for{" "}
           <span className="bg-gradient-to-b from-teal-500 via-emerald-500 to-[#62c08f] to-99% bg-clip-text text-transparent">
@@ -139,9 +134,7 @@ const Landing = () => {
             delay: 0.4,
             ease: [0.16, 1, 0.3, 1],
           }}
-          className="mx-auto mt-6 max-w-3xl text-xl tracking-tight text-muted-foreground text-center leading-normal
-          [text-shadow:0px_1px_3px_rgba(0,0,0,0.1)] dark:[text-shadow:0px_1px_3px_rgba(255,255,255,0.1)]
-          lg:[text-shadow:0px_2px_4px_rgba(0,0,0,0.12)] lg:dark:[text-shadow:0px_2px_4px_rgba(255,255,255,0.12)]"
+          className="text-muted-foreground mx-auto mt-6 max-w-3xl text-center text-xl leading-normal tracking-tight [text-shadow:0px_1px_3px_rgba(0,0,0,0.1)] lg:[text-shadow:0px_2px_4px_rgba(0,0,0,0.12)] dark:[text-shadow:0px_1px_3px_rgba(255,255,255,0.1)] lg:dark:[text-shadow:0px_2px_4px_rgba(255,255,255,0.12)]"
         >
           Collection of copy-and-paste components built with React, TypeScript,
           and Tailwind CSS. Create stunning UI with our carefully crafted
@@ -157,7 +150,7 @@ const Landing = () => {
             delay: 0.5,
             ease: [0.16, 1, 0.3, 1],
           }}
-          className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center items-center mt-12"
+          className="mt-12 flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4"
         >
           <motion.div
             initial={{ opacity: 0, x: -6 }}
@@ -171,7 +164,7 @@ const Landing = () => {
             <Button
               variant="outline"
               size="lg"
-              className="text-zinc-700 hover:bg-white dark:text-white inline-flex items-center justify-center bg-white text-base px-6 transition-transform duration-150 shadow-[0_10px_20px_rgba(0,_0,_0,_.1),0_3px_6px_rgba(0,_0,_0,_.05)] hover:shadow-[rgba(0,_1,_0,_.2)_0_2px_8px] active:outline-none hover:opacity-80 rounded-2xl py-2 border border-zinc-200"
+              className="inline-flex items-center justify-center rounded-2xl border border-zinc-200 bg-white px-6 py-2 text-base text-zinc-700 shadow-[0_10px_20px_rgba(0,_0,_0,_.1),0_3px_6px_rgba(0,_0,_0,_.05)] transition-transform duration-150 hover:bg-white hover:opacity-80 hover:shadow-[rgba(0,_1,_0,_.2)_0_2px_8px] active:outline-none dark:text-white"
             >
               <a href="/docs">Documentation</a>
             </Button>
@@ -189,7 +182,7 @@ const Landing = () => {
             <Button
               size="lg"
               variant="default"
-              className="text-white inline-flex items-center justify-center  bg-gradient-to-b from-[#464d55] to-[#25292e] text-base px-6 transition duration-150 shadow-[0_10px_20px_rgba(0,_0,_0,_.1),0_3px_6px_rgba(0,_0,_0,_.05)] hover:shadow-[rgba(0,_1,_0,_.2)_0_2px_8px] active:outline-none hover:opacity-90 rounded-2xl py-2"
+              className="inline-flex items-center justify-center rounded-2xl bg-gradient-to-b from-[#464d55] to-[#25292e] px-6 py-2 text-base text-white shadow-[0_10px_20px_rgba(0,_0,_0,_.1),0_3px_6px_rgba(0,_0,_0,_.05)] transition duration-150 hover:opacity-90 hover:shadow-[rgba(0,_1,_0,_.2)_0_2px_8px] active:outline-none"
             >
               <a href="/components">Browse Components</a>
             </Button>
@@ -198,7 +191,7 @@ const Landing = () => {
       </div>
 
       {/* Logo animation */}
-      <div className="flex flex-wrap items-center justify-center gap-8 md:gap-4 lg:gap-10 mt-10">
+      <div className="mt-10 flex flex-wrap items-center justify-center gap-8 md:gap-4 lg:gap-10">
         {logos.map((logo, index) => (
           <motion.div
             key={index}
@@ -217,9 +210,9 @@ const Landing = () => {
               delay: 0.6 + index * 0.08,
               ease: [0.16, 1, 0.3, 1],
             }}
-            className={`${logo.bgColor} p-2 rounded-2xl flex items-center justify-center shadow-md hover:shadow-lg transition-shadow duration-300 cursor-pointer group`}
+            className={`${logo.bgColor} group flex cursor-pointer items-center justify-center rounded-2xl p-2 shadow-md transition-shadow duration-300 hover:shadow-lg`}
           >
-            <div className=" ransition-transform ">
+            <div className="ransition-transform">
               {logo.component ? (
                 logo.component
               ) : (
