@@ -134,7 +134,7 @@ export default function Page() {
         initialTab="preview"
         codeHeight={420}
         preview={
-          <div className="max-w-md">
+          <div className="">
             <AiGlareLoader label="Thinking…" />
           </div>
         }
@@ -162,7 +162,7 @@ export default function Page() {
         }}
       />
 
-      <section className="prose prose-neutral dark:prose-invert max-w-none">
+      <section className="prose prose-neutral dark:prose-invert text-foreground max-w-none">
         <h2>When to use</h2>
         <ul>
           <li>While generating AI responses or running long inference.</li>
