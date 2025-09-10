@@ -17,7 +17,7 @@ const SidebarComp = () => {
 
   return (
     <div className="hidden lg:block">
-      <nav className="sticky top-20 space-y-6 px-2">
+      <nav className="sticky top-20 space-y-6 px-4 sm:px-6 md:px-8 lg:px-10">
         <div className="space-y-2">
           {/* Getting Started Section */}
           <div>

@@ -85,8 +85,8 @@ const Navbar = ({
 
   return (
     <>
-      <section className={`sticky top-0 z-50 w-full`}>
-        <div className="mx-auto max-w-7xl py-2">
+      <section className={`bg-background sticky top-0 z-50 w-full`}>
+        <div className="mx-auto max-w-7xl py-2 sm:px-6 md:px-8 lg:px-10">
           {/* Desktop Menu */}
           <nav className="hidden justify-between lg:flex">
             <div className="flex items-center gap-4">

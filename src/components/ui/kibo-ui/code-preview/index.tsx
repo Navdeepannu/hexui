@@ -173,7 +173,7 @@ export function CodePreview({
     <div className={cn("w-full", className)} {...props}>
       <div className="p-2 sm:p-3">
         <Tabs defaultValue={defaultTab}>
-          <div className="tems-center mb-2 flex justify-between gap-2">
+          <div className="tems-center  flex justify-between gap-2">
             <TabsList className="flex-1 flex-wrap">
               {preview && (
                 <TabsTrigger value="preview">
@@ -196,7 +196,7 @@ export function CodePreview({
               <div className="flex items-center gap-2">
                 {/* grouped presets: visible on mobile and desktop, hidden on tablet (md) */}
                 <div className="flex items-center md:hidden lg:flex">
-                  <div className="bg-background/50 inline-flex items-center gap-1 rounded-md border p-1">
+                  <div className="bg-accent hidden items-center gap-1 rounded-md border p-1 md:inline-flex">
                     {presets.slice(0, 3).map(({ key, width, title, Icon }) => {
                       const active = previewWidth === width;
                       const btn = (
@@ -241,11 +241,11 @@ export function CodePreview({
                         aria-label={`Set preview to ${title} size`}
                         aria-pressed={active}
                         className={cn(
-                          "inline-flex h-8 w-8 items-center justify-center rounded border text-xs shadow-sm",
-                          "bg-background border-border hover:bg-muted/30",
+                          "inline-flex size-8 items-center justify-center rounded border text-xs",
+                          "border-border hover:bg-accent/30 bg-red-500",
                           "dark:bg-popover/30 dark:border-border/30 dark:hover:bg-popover/40",
                           active
-                            ? "ring-ring/50 bg-foreground text-background ring-2"
+                            ? "ring-ring/50 bg-accent text-foreground ring-1"
                             : "text-foreground",
                         )}
                       >
@@ -281,9 +281,9 @@ export function CodePreview({
                         previewWidth === "auto" ? "100%" : `${previewWidth}px`,
                     }}
                   >
-                    <div className="bg-background ring-border/60 h-full w-full overflow-auto rounded-lg ring-1">
+                    <div className="bg-accent h-full w-full overflow-auto rounded-lg p-2">
                       {/* Render user preview inside frame */}
-                      <div className="flex h-full w-full items-center justify-center">
+                      <div className="bg-background flex h-full w-full items-center justify-center rounded-lg">
                         {preview}
                       </div>
                     </div>
@@ -294,7 +294,7 @@ export function CodePreview({
                         role="separator"
                         aria-label="Resize preview"
                         onMouseDown={onMouseDownHandle}
-                        className="border-border/60 bg-border/80 hover:bg-foreground/30 absolute top-1/2 right-[-6px] z-10 h-8 w-2 -translate-y-1/2 cursor-col-resize rounded border dark:border-white/20 dark:bg-white/25 dark:hover:bg-white/45"
+                        className="hover:bg-foreground/30 from-accent absolute top-1/2 right-[-10px] z-10 h-10 w-3 -translate-y-1/2 cursor-col-resize rounded bg-gradient-to-r to-neutral-600 dark:hover:bg-white/45"
                       >
                         <span className="sr-only">Drag to resize</span>
                       </div>
