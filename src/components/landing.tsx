@@ -52,61 +52,6 @@ const Landing = () => {
 
   return (
     <div className="flex min-h-[80vh] w-full flex-col items-center justify-center">
-      {/* Sportlight */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 2, ease: [0.16, 1, 0.3, 1], delay: 0.7 }}
-        className="pointer-events-none absolute top-0 left-0 z-40 h-screen w-screen overflow-hidden"
-      >
-        {/* Main spotlight beam */}
-        <div
-          style={{
-            transform: "rotate(-45deg) translate(-40%, -30%)",
-            transformOrigin: "top left",
-            width: "800px",
-            height: "2200px",
-            background:
-              "radial-gradient(60% 40% at 50% 30%, hsla(180, 45%, 75%, .25) 0%, hsla(140, 35%, 65%, .18) 40%, hsla(120, 25%, 60%, .08) 70%, transparent 100%)",
-          }}
-          className="absolute top-0 left-0"
-        ></div>
-
-        {/* Secondary spotlight beam */}
-        <div
-          style={{
-            position: "absolute",
-            borderRadius: "30px",
-            transform: "rotate(-45deg) translate(10%, -15%)",
-            transformOrigin: "top left",
-            top: "0",
-            left: "0",
-            width: "600px",
-            height: "2000px",
-            background:
-              "radial-gradient(55% 35% at 45% 25%, hsla(200, 40%, 70%, .2) 0%, hsla(160, 30%, 60%, .12) 50%, hsla(140, 20%, 55%, .06) 80%, transparent 100%)",
-          }}
-          className="absolute top-0 left-0"
-        ></div>
-
-        {/* Accent spotlight for larger screens */}
-        <div
-          style={{
-            position: "absolute",
-            borderRadius: "40px",
-            transform: "rotate(-45deg) translate(-20%, -10%)",
-            transformOrigin: "top left",
-            top: "0",
-            left: "0",
-            width: "400px",
-            height: "1800px",
-            background:
-              "radial-gradient(45% 30% at 60% 20%, hsla(190, 35%, 80%, .15) 0%, hsla(150, 25%, 65%, .08) 60%, transparent 100%)",
-          }}
-          className="absolute top-0 left-0 hidden lg:block"
-        ></div>
-      </motion.div>
-
       <div className="relative z-10 max-w-7xl">
         {/* Main heading animation */}
         <motion.h1

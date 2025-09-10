@@ -4,6 +4,7 @@ import "./globals.css";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { ThemeProvider } from "@/components/theme-provider";
+import { Container } from "@/components/container";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -23,12 +24,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body
-        className={`${inter.className} bg-background text-foreground antialiased`}
-      >
+      <body className={`${inter.className} antialiased`}>
         <ThemeProvider>
           <Navbar />
-          {children}
+          <Container>
+            <main className="min-h-[60vh]">{children}</main>
+          </Container>
           <Footer />
         </ThemeProvider>
       </body>

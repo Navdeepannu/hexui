@@ -129,7 +129,7 @@ export function ThemeToggleButton({
     <Button
       type="button"
       size="icon"
-      variant={variant as any}
+      variant={variant}
       aria-label="Toggle theme"
       onClick={handleClick}
       className={className}

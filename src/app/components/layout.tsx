@@ -1,4 +1,5 @@
 import SidebarComp from "@/components/sidebar-component";
+import { Container } from "@/components/container";
 
 export default function ComponentLayout({
   children,
@@ -6,13 +7,21 @@ export default function ComponentLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="flex w-full justify-center">
-      <div className="bg-background z-10 flex min-h-screen w-full max-w-[94rem] border-x border-neutral-900">
-        {/* Sidebar */}
-        <SidebarComp />
-        {/* Main content */}
-        <main className="flex-1 px-8 py-30">{children}</main>
-      </div>
+    <div className="min-h-screen">
+      <Container>
+        <div className="mx-auto flex w-full gap-8 py-12">
+          {/* Sidebar (desktop) */}
+          <aside
+            aria-label="Primary navigation"
+            className="hidden w-56 shrink-0 lg:block"
+          >
+            <SidebarComp />
+          </aside>
+
+          {/* Main content (centered column) */}
+          <main className="max-w-[980px] flex-1">{children}</main>
+        </div>
+      </Container>
     </div>
   );
 }

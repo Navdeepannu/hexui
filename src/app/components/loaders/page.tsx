@@ -1,5 +1,7 @@
 import CodePreview from "@/components/ui/kibo-ui/code-preview";
 import AiGlareLoader from "@/components/ui/loaders/ai-glare-loader";
+// ...existing code... (removed unused Snippet imports)
+import RuntimeSelector from "@/components/runtime-selector";
 
 const sourceTsx = `"use client";
 
@@ -42,10 +44,21 @@ export function AiGlareLoader({ className, label = "Thinking…", ...props }: Ai
           100% { transform: translateX(160%) rotate(0.001deg); opacity: 0; }
         }
         @keyframes bounce {
-          0%, 80%, 100% { transform: translateY(0); opacity: .7; }
-          40% { transform: translateY(-30%); opacity: 1; }
-        }
-  \`}</style>
+      <section className="space-y-2">
+        <h2 className="text-lg font-semibold">Install via shadcn/ui CLI</h2>
+        <p className="text-muted-foreground text-sm">Copy and paste to add this component into your project.</p>
+
+        <Snippet defaultValue="npm" className="w-full">
+          <SnippetHeader>
+            <div className="text-sm font-medium">npm</div>
+            <div className="flex items-center gap-1">
+              <SnippetCopyButton value={"npx shadcn@latest add ai-glare-loader"} />
+            </div>
+          </SnippetHeader>
+
+          <SnippetTabsContent value="npm">npx shadcn@latest add ai-glare-loader</SnippetTabsContent>
+        </Snippet>
+      </section>
     </div>
   );
 }
@@ -120,7 +133,7 @@ export default function Page() {
   return (
     <div className="space-y-10">
       <header className="space-y-2">
-        <h1 className="text-4xl font-bold tracking-tight">
+        <h1 className="text-foreground text-4xl font-bold tracking-tight">
           AI Loader with Glare
         </h1>
         <p className="text-muted-foreground">
@@ -129,13 +142,11 @@ export default function Page() {
       </header>
 
       <CodePreview
-        title="AI Glare Loader"
-        description="Preview, source, and usage of the loader component."
         initialTab="preview"
         codeHeight={420}
         preview={
           <div className="">
-            <AiGlareLoader label="Thinking…" />
+            <AiGlareLoader />
           </div>
         }
         source={{
@@ -162,27 +173,9 @@ export default function Page() {
         }}
       />
 
-      <section className="prose prose-neutral dark:prose-invert text-foreground max-w-none">
-        <h2>When to use</h2>
-        <ul>
-          <li>While generating AI responses or running long inference.</li>
-          <li>
-            During background tasks that need a calm, unobtrusive indicator.
-          </li>
-        </ul>
-        <h2>Accessibility</h2>
-        <ul>
-          <li>Include a live region if you update status text dynamically.</li>
-          <li>Keep motion subtle and respect user preferences if needed.</li>
-        </ul>
-        <h2>Customization</h2>
-        <ul>
-          <li>
-            Change the label via the <code>label</code> prop.
-          </li>
-          <li>Adjust glare speed by changing the animation duration.</li>
-          <li>Tweak dot sizes/delays for different rhythms.</li>
-        </ul>
+      <section className="text-foreground space-y-2">
+        <h2 className="text-lg font-semibold">Install via shadcn/ui CLI</h2>
+        <RuntimeSelector />
       </section>
     </div>
   );

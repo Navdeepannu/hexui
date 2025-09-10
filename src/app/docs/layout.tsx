@@ -11,7 +11,7 @@ export default function DocsLayout({
         {/* Sidebar */}
         <SidebarComp />
         {/* Main content */}
-        <main className="flex-1 px-8 py-30">{children}</main>
+        <main className="flex-1 px-8 py-20">{children}</main>
       </div>
     </div>
   );

@@ -28,7 +28,7 @@ function StepRow({ index, title, children }: StepRowProps) {
 
 export default function Page() {
   return (
-    <div className="space-y-10">
+    <div className="prose prose-wide space-y-10">
       <header className="space-y-2">
         <h1 className="text-foreground text-4xl font-bold tracking-tight">
           Install Next.js
@@ -47,15 +47,7 @@ export default function Page() {
         />
 
         <StepRow index={1} title="Create a new project">
-          <RuntimeSelector
-            title=""
-            commands={{
-              npm: "npx create-next-app@latest",
-              pnpm: "pnpm create next-app",
-              yarn: "yarn create next-app",
-              bun: "bun create next-app",
-            }}
-          />
+          <RuntimeSelector />
         </StepRow>
 
         <StepRow
@@ -75,14 +67,7 @@ What import alias would you like configured? @/*`}</pre>
         </StepRow>
 
         <StepRow index={3} title="Start the development server">
-          <RuntimeSelector
-            commands={{
-              npm: "cd my-app && npm run dev",
-              pnpm: "cd my-app && pnpm dev",
-              yarn: "cd my-app && yarn dev",
-              bun: "cd my-app && bun dev",
-            }}
-          />
+          <RuntimeSelector />
         </StepRow>
       </div>
     </div>
